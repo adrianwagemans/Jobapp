@@ -20,7 +20,7 @@ const JobComponent = ({result}) => {
                     <p className={`new ${result.new ? "": "clear" }`} >
                         NEW
                     </p>
-                    <p className={`featured ${result.featured ? "": "clear" }`} > 
+                    <p className={`featured ${result.featured ? "": "clear border" }`} > 
                         FEATURED
                     </p>
 
@@ -32,10 +32,13 @@ const JobComponent = ({result}) => {
                     <p>{result.postedAt}</p>
                     <p>{result.contract}</p>
                     <p>{result.location}</p>
+                   
 
                 </div>
                 </div>
+            
             </div>
+            <div className='hr'></div>
 
             <div className='categories'>
                 <p>

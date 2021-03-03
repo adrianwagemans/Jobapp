@@ -112,7 +112,7 @@ acronym {
 /*filters bar */
 .FiltersBar {
   width: 70vw;
-  height: 40px;
+  height: 60px;
   position: relative;
   background-color: white;
   margin: 0 auto;
@@ -132,12 +132,13 @@ acronym {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 35px;
   width: 70%;
 }
 
 .FiltersBar .filter {
-  margin: 0 20px;
-  height: 25px;
+  margin: 0 10px;
+  height: 35px;
   background-color: #effafa;
   padding-left: 5px;
   border-radius: 5px;
@@ -151,14 +152,15 @@ acronym {
 
 .FiltersBar .filter p {
   padding: 5px;
+  font-weight: 700;
 }
 
 .FiltersBar img {
-  height: 14px;
-  width: 14px;
+  height: 15px;
+  width: 15px;
   z-index: 10;
   background-color: #5ba4a4;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -185,7 +187,7 @@ acronym {
 }
 
 .jobContainer {
-  margin: 5vh auto;
+  margin: 3vh auto;
   width: 70vw;
   background-color: white;
   display: -webkit-box;
@@ -194,6 +196,12 @@ acronym {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-shadow: 5px 10px 8px #8888882a;
+          box-shadow: 5px 10px 8px #8888882a;
+}
+
+.jobContainer .border {
+  border-left: 6px solid #5ba4a4;
 }
 
 .mainInfo {
@@ -211,6 +219,7 @@ acronym {
 }
 
 .textContainer .upperLine {
+  margin-top: 20px;
   width: 30vw;
 }
 
@@ -235,7 +244,7 @@ acronym {
 }
 
 .textContainer .jobTitle {
-  margin: 4% 0;
+  margin: 3% 0;
   color: #2c3a3a;
   font-weight: 700;
 }
@@ -254,6 +263,14 @@ acronym {
 .textContainer .jobInfo p {
   padding-right: 6%;
   color: #7b8e8e;
+  margin-bottom: 15px;
+}
+
+.hr {
+  border: 0.5px solid rgba(128, 128, 128, 0.692);
+  width: 80%;
+  margin: 0 auto;
+  display: none;
 }
 
 .categories {
@@ -294,11 +311,77 @@ acronym {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1000px) {
+  .FiltersBar {
+    height: auto;
+  }
+  .FiltersBar .filters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .FiltersBar .filter {
+    margin: 8px;
+  }
+  .jobContainer {
+    font-size: 18px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 35vh;
+    width: 90%;
+    margin-top: 8vh;
+    margin-bottom: 0;
+    position: relative;
+  }
+  .jobContainer .textContainer {
+    width: 100%;
+  }
+  .jobContainer img {
+    position: absolute;
+    top: -50px;
+    width: 75px;
+    height: 75px;
+  }
+  .jobContainer .mainInfo {
+    width: 90%;
+    margin: 5px auto;
+  }
+  .jobContainer .upperLine {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .jobContainer .upperLine .new {
+    margin: 0 25px;
+  }
+  .jobContainer .jobTitle {
+    margin: 5% 0;
+  }
+  .jobContainer .jobInfo {
+    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .jobContainer .hr {
+    display: block;
+  }
+  .jobContainer .categories p {
+    font-size: 16px;
+    margin: 6px;
+  }
+}
+
 body {
   background-color: #effafa;
   font-family: "Spartan", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

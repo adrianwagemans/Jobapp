@@ -1,3 +1,11 @@
+.hr {
+  border: 0.5px solid rgba(128, 128, 128, 0.692);
+  width: 80%;
+  margin: 0 auto;
+
+  display: none;
+}
+
 .categories {
   display: flex;
   flex-wrap: wrap;

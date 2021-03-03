@@ -1,9 +1,13 @@
 .jobContainer {
-  margin: 5vh auto;
+  margin: 3vh auto;
   width: 70vw;
   background-color: white;
   display: flex;
   justify-content: space-between;
+  box-shadow: 5px 10px 8px #8888882a;
+  .border {
+    border-left: 6px solid $cyan1;
+  }
 }
 
 .mainInfo {
@@ -17,6 +21,7 @@
 
 .textContainer {
   .upperLine {
+    margin-top: 20px;
     width: 30vw;
     .clear {
       display: none;
@@ -39,7 +44,7 @@
     }
   }
   .jobTitle {
-    margin: 4% 0;
+    margin: 3% 0;
     color: $cyan4;
     font-weight: 700;
     &:hover {
@@ -52,6 +57,7 @@
     p {
       padding-right: 6%;
       color: $cyan3;
+      margin-bottom: 15px;
     }
   }
 }

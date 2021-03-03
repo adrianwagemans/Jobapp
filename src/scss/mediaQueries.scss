@@ -1,0 +1,60 @@
+@media only screen and (max-width: 1000px) {
+  .FiltersBar {
+    height: auto;
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .filter {
+      margin: 8px;
+    }
+  }
+
+  .jobContainer {
+    font-size: 18px;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    height: 35vh;
+    width: 90%;
+    margin-top: 8vh;
+    margin-bottom: 0;
+    position: relative;
+    .textContainer {
+      width: 100%;
+    }
+    img {
+      position: absolute;
+      top: -50px;
+      width: 75px;
+      height: 75px;
+    }
+    .mainInfo {
+      width: 90%;
+      margin: 5px auto;
+    }
+    .upperLine {
+      display: flex;
+      .new {
+        margin: 0 25px;
+      }
+    }
+    .jobTitle {
+      margin: 5% 0;
+    }
+    .jobInfo {
+      display: inline-block;
+      display: flex;
+    }
+    .hr {
+      display: block;
+    }
+    .categories {
+      p {
+        font-size: 16px;
+        margin: 6px;
+      }
+    }
+  }
+}
