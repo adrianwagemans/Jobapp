@@ -1,13 +1,22 @@
 @media only screen and (max-width: 1000px) {
+  .headerDesktop {
+    display: none;
+  }
+  .headerMobile {
+    display: block;
+  }
+
   .FiltersBar {
+    width: 90vw;
     height: auto;
     .filters {
       display: flex;
       flex-wrap: wrap;
       overflow: hidden;
+      margin: 1px 1px 1px 15px;
     }
     .filter {
-      margin: 8px;
+      margin: 5px;
     }
   }
 
@@ -16,28 +25,30 @@
     flex-direction: column;
     justify-content: space-evenly;
 
-    height: 35vh;
+    height: 300px;
     width: 90%;
     margin-top: 8vh;
     margin-bottom: 0;
     position: relative;
+
     .textContainer {
       width: 100%;
     }
     img {
       position: absolute;
       top: -50px;
+      left: 10px;
       width: 75px;
       height: 75px;
     }
     .mainInfo {
       width: 90%;
-      margin: 5px auto;
+      margin: 25px auto 5px;
     }
     .upperLine {
       display: flex;
       .new {
-        margin: 0 25px;
+        margin: 0px 25px;
       }
     }
     .jobTitle {

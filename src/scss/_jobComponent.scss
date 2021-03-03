@@ -5,14 +5,16 @@
   display: flex;
   justify-content: space-between;
   box-shadow: 5px 10px 8px #8888882a;
-  .border {
-    border-left: 6px solid $cyan1;
-  }
+}
+
+.leftBorder {
+  border-left: 6px solid $cyan1;
 }
 
 .mainInfo {
   display: flex;
   align-items: center;
+
   img {
     height: 10vh;
     padding: 10px 15px 10px 25px;

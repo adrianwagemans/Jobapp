@@ -4,7 +4,7 @@ const JobComponent = ({result}) => {
 
     const exist = useRef();
     return (
-        <div className='jobContainer'>
+        <div className={`jobContainer ${result.featured ? "leftBorder" : "" }`}>
             
             <div className='mainInfo'>
         
@@ -20,7 +20,7 @@ const JobComponent = ({result}) => {
                     <p className={`new ${result.new ? "": "clear" }`} >
                         NEW
                     </p>
-                    <p className={`featured ${result.featured ? "": "clear border" }`} > 
+                    <p className={`featured ${result.featured ? "": "clear" }`} > 
                         FEATURED
                     </p>
 

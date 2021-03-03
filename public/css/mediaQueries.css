@@ -1,5 +1,12 @@
 @media only screen and (max-width: 1000px) {
+  .headerDesktop {
+    display: none;
+  }
+  .headerMobile {
+    display: block;
+  }
   .FiltersBar {
+    width: 90vw;
     height: auto;
   }
   .FiltersBar .filters {
@@ -9,9 +16,10 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     overflow: hidden;
+    margin: 1px 1px 1px 15px;
   }
   .FiltersBar .filter {
-    margin: 8px;
+    margin: 5px;
   }
   .jobContainer {
     font-size: 18px;
@@ -22,7 +30,7 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    height: 35vh;
+    height: 300px;
     width: 90%;
     margin-top: 8vh;
     margin-bottom: 0;
@@ -34,12 +42,13 @@
   .jobContainer img {
     position: absolute;
     top: -50px;
+    left: 10px;
     width: 75px;
     height: 75px;
   }
   .jobContainer .mainInfo {
     width: 90%;
-    margin: 5px auto;
+    margin: 25px auto 5px;
   }
   .jobContainer .upperLine {
     display: -webkit-box;
@@ -47,7 +56,7 @@
     display: flex;
   }
   .jobContainer .upperLine .new {
-    margin: 0 25px;
+    margin: 0px 25px;
   }
   .jobContainer .jobTitle {
     margin: 5% 0;
