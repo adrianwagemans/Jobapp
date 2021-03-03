@@ -1,53 +1,67 @@
-import React from 'react'
+import React, {useRef} from 'react'
 
 const JobComponent = ({result}) => {
+
+    const exist = useRef();
     return (
         <div className='jobContainer'>
-            <div className='companyLogo'>
+            
+            <div className='mainInfo'>
+        
                 
                 <img src={result.logo} alt='logo compania'/>
-            </div>
-
-            <div className='mainInfo'>
-                <div>
-                    <div>
+            
+                <div className="textContainer">
+                <div className='upperLine'>
+                    <p>
                     {result.company}
-                    </div>
-                    <div className='new'>
-                        {result.new ? 'NEW' : ''}
-                    </div>
-                    <div>
-                        {result.featured ? 'FEATURED': ''}
-                    </div>
+
+                    </p>
+                    <p className={`new ${result.new ? "": "clear" }`} >
+                        NEW
+                    </p>
+                    <p className={`featured ${result.featured ? "": "clear" }`} > 
+                        FEATURED
+                    </p>
 
                 </div>
-                <div className='jobTitle'>
+                <p className='jobTitle'>
                     {result.position}
-                </div>
+                </p>
                 <div className='jobInfo'>
-                    {result.postedAt}
-                    {result.contract}
-                    {result.location}
+                    <p>{result.postedAt}</p>
+                    <p>{result.contract}</p>
+                    <p>{result.location}</p>
 
+                </div>
                 </div>
             </div>
 
             <div className='categories'>
                 <p>
                     {result.role}
+                    
                 </p>
+        
                 <p>
                     {result.level}
                 </p>
-                <p>
+               
                     {result.languages.map((language)=>{
                         return(
-                            <div>
+                            <p>
                                 {language}
-                            </div>
+                            </p>
                         )
                     })}
-                </p>
+                    {result.tools.map((tool)=>{
+                        return(
+                            <p>
+                                {tool}
+                            </p>
+                        )
+                    })}
+                
 
                 <p>
                     {result.role}

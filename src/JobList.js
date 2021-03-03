@@ -6,7 +6,7 @@ function JobList() {
     const renderedResults = data.map((result) => {
         return (
            <div>
-               <JobComponent result={result}/> 
+               <JobComponent result={result}/>
            </div>
         )
     })

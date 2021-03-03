@@ -1,0 +1,57 @@
+.jobContainer {
+  margin: 5vh auto;
+  width: 70vw;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainInfo {
+  display: flex;
+  align-items: center;
+  img {
+    height: 10vh;
+    padding: 10px 15px 10px 25px;
+  }
+}
+
+.textContainer {
+  .upperLine {
+    width: 30vw;
+    .clear {
+      display: none;
+    }
+    p {
+      display: inline-block;
+      padding: 0% 3% 0 0;
+      color: $cyan1;
+      font-weight: 700;
+    }
+
+    .new {
+      @extend%job-alert;
+      background-color: $cyan1;
+      margin-right: 7px;
+    }
+    .featured {
+      @extend%job-alert;
+      background-color: $cyan4;
+    }
+  }
+  .jobTitle {
+    margin: 4% 0;
+    color: $cyan4;
+    font-weight: 700;
+    &:hover {
+      cursor: pointer;
+      color: $cyan1;
+    }
+  }
+  .jobInfo {
+    display: flex;
+    p {
+      padding-right: 6%;
+      color: $cyan3;
+    }
+  }
+}
