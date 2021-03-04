@@ -45,25 +45,25 @@ const JobComponent = ({result, filters, setFilters}) => {
             <div className='hr'></div>
 
             <div className='categories'>
-                <p onClick={(e) => onCatClick(e.target.innerHTML)}>
+                <p onClick={(e) =>  filters.includes(e.target.innerHTML) ? null : onCatClick(e.target.innerHTML)}>
                     {result.role}
                     
                 </p>
         
-                <p onClick={(e) => onCatClick(e.target.innerHTML)}>
+                <p onClick={(e) =>  filters.includes(e.target.innerHTML) ? null : onCatClick(e.target.innerHTML)}>
                     {result.level}
                 </p>
                
                     {result.languages.map((language)=>{
                         return(
-                            <p onClick={(e) => onCatClick(e.target.innerHTML)}>
+                            <p onClick={(e) =>  filters.includes(e.target.innerHTML) ? null : onCatClick(e.target.innerHTML)}>
                                 {language}
                             </p>
                         )
                     })}
                     {result.tools.map((tool)=>{
                         return(
-                            <p onClick={(e) => onCatClick(e.target.innerHTML)}>
+                            <p onClick={(e) =>  filters.includes(e.target.innerHTML) ? null : onCatClick(e.target.innerHTML)}>
                                 {tool}
                             </p>
                         )
