@@ -1,11 +1,11 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Close from './images/icon-remove.svg'
 
-const FiltersBar = () => {
+const FiltersBar = ({filters}) => {
 
-    const [fitlers, setFilters] = useState (['hola', 'hola' ,'omo'])
+    
 
-   const activeFilters =  fitlers.map((filter)=>{
+   const activeFilters =  filters.map((filter)=>{
         return(
             <div className='filter'>
                 <p>{filter}</p>

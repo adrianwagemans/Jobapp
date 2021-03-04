@@ -1,6 +1,10 @@
 import React, {useRef} from 'react'
 
-const JobComponent = ({result}) => {
+const JobComponent = ({result, filters, setFilters}) => {
+
+    const onCatClick = (cat) => {
+        setFilters([...filters, cat])
+    }
 
     const exist = useRef();
     return (
@@ -41,34 +45,30 @@ const JobComponent = ({result}) => {
             <div className='hr'></div>
 
             <div className='categories'>
-                <p>
+                <p onClick={(e) => onCatClick(e.target.innerHTML)}>
                     {result.role}
                     
                 </p>
         
-                <p>
+                <p onClick={(e) => onCatClick(e.target.innerHTML)}>
                     {result.level}
                 </p>
                
                     {result.languages.map((language)=>{
                         return(
-                            <p>
+                            <p onClick={(e) => onCatClick(e.target.innerHTML)}>
                                 {language}
                             </p>
                         )
                     })}
                     {result.tools.map((tool)=>{
                         return(
-                            <p>
+                            <p onClick={(e) => onCatClick(e.target.innerHTML)}>
                                 {tool}
                             </p>
                         )
                     })}
-                
-
-                <p>
-                    {result.role}
-                </p>
+            
             </div>
             
         </div>
