@@ -9,6 +9,7 @@
   .FiltersBar {
     width: 90vw;
     height: auto;
+    min-height: 50px;
     .filters {
       display: flex;
       flex-wrap: wrap;

@@ -322,6 +322,7 @@ acronym {
   .FiltersBar {
     width: 90vw;
     height: auto;
+    min-height: 50px;
   }
   .FiltersBar .filters {
     display: -webkit-box;

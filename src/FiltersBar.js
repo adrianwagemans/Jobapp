@@ -1,26 +1,35 @@
 import React from 'react'
 import Close from './images/icon-remove.svg'
 
-const FiltersBar = ({filters}) => {
+const FiltersBar = ({filters, setFilters}) => {
 
-    
+   
 
-   const activeFilters =  filters.map((filter)=>{
+   const activeFilters =  filters.map((f)=>{
+
+
+    const onCloseClick = () =>{
+        const filterRemove = [...filters].filter(item => item !== f)
+          setFilters(filterRemove)
+          
+      }
+
+
         return(
             <div className='filter'>
-                <p>{filter}</p>
-                <img src={Close}/> 
+                <p>{f}</p>
+                <img alt='' onClick={()=> onCloseClick ()} src={Close}/> 
             </div>
         )
     })
 
     return (
-        <div className='FiltersBar'>
-            <div className='filters'>
+        <div className={`FiltersBar ${activeFilters.length === 0 ? 'hide' : ""}`}>
+            <div className='filters'  >
                 {activeFilters}
             </div>
             <div>
-                <p id='clear'>
+                <p onClick={()=> setFilters([])} id='clear'>
                     Clear
                 </p>
             </div>

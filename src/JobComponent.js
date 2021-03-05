@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React from 'react'
 
 const JobComponent = ({result, filters, setFilters}) => {
 
@@ -6,9 +6,11 @@ const JobComponent = ({result, filters, setFilters}) => {
         setFilters([...filters, cat])
     }
 
-    const exist = useRef();
+    
+   
     return (
-        <div className={`jobContainer ${result.featured ? "leftBorder" : "" }`}>
+        <div  key={result.id} className={`jobContainer ${result.featured ? "leftBorder" : "" }`}
+            className={`jobContainer ${filters.includes(result.level)  ? "" : 'hide'}`}>
             
             <div className='mainInfo'>
         
